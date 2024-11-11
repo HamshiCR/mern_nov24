@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Two Numbers</title>
+</head>
+
+<body>
+    <div>
+        <form>
+            <div>
+                <label for="firstNumber">First Number</label>
+                <input type="text" id="firstNumber" name="firstnumber">
+            </div>
+            <div>
+                <label for="secondNumber">Second Number</label>
+                <input type="text" id="secondNumber" name="secondnumber">
+            </div>
+            <div>
+                <label for="sum">Sum</label>
+                <input type="text" id="sum" name="sum" readonly>
+            </div>
+            <div>
+                <button type="button" onclick="addTwoNumbers()">Add</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+        function addTwoNumbers() {
+            const firstNumber = parseFloat(document.getElementById('firstNumber').value);
+            const secondNumber = parseFloat(document.getElementById('secondNumber').value);
+            const sum = firstNumber + secondNumber;
+
+            document.getElementById('sum').value = sum;
+        }
+    </script>
+</body>
+
+</html>
